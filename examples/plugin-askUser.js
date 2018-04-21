@@ -22,27 +22,31 @@ bot.on('ask.email', msg => {
     const name = msg.text;
 
     // Ask user age
-    return bot.sendMessage(id, `Nice to meet you, ${ name }! How old are you?`, {ask: 'age'});
+    return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your bitshare id?`, {ask: 'bitshare'});
 
 });
 
 // Ask age event
-bot.on('ask.age', msg => {
+bot.on('ask.bitshare', msg => {
 
     const id = msg.from.id;
     const age = Number(msg.text);
+    
+        // Ask user age
+    return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
 
-    if (!age) {
 
-        // If incorrect age, ask again
-        return bot.sendMessage(id, 'Incorrect age. Please, try again!', {ask: 'age'});
+});
 
-    } else {
+// Ask age event
+bot.on('ask.erc20', msg => {
 
-        // Last message (don't ask)
-        return bot.sendMessage(id, `You are ${ age } years old. Great!`);
+    const id = msg.from.id;
+    const age = Number(msg.text);
+    
+        // Ask user age
+    return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
 
-    }
 
 });
 
