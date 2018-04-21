@@ -45,7 +45,10 @@ bot.on('ask.erc20', msg => {
     const address = msg.text;
     
         // Ask user age
-    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }!');
+
+    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }!`);
+    
+
 
 });
 
