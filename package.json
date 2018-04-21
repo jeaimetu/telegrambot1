@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/ava test/index.js",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "start": "node examples/plugin-askUser.js"
   },
   "repository": {
     "type": "git",
