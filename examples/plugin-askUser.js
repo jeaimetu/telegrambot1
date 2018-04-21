@@ -66,4 +66,5 @@ bot.on('ask.confirm', msg => {
     return bot.sendMessage(id, `Your information is submitted, ${ a }, ${ b }!`);
 });
 
-bot.start();
+//bot.start();
+bot.polling()
