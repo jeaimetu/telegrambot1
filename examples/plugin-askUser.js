@@ -30,10 +30,10 @@ bot.on('ask.email', msg => {
 bot.on('ask.bitshare', msg => {
 
     const id = msg.from.id;
-    const age = Number(msg.text);
+    const bitshareid = msg.text;
     
         // Ask user age
-    return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
+    return bot.sendMessage(id, `Your bitshare id address, ${ bitshareid }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
 
 
 });
@@ -42,11 +42,10 @@ bot.on('ask.bitshare', msg => {
 bot.on('ask.erc20', msg => {
 
     const id = msg.from.id;
-    const age = Number(msg.text);
+    const address = msg.text;
     
         // Ask user age
-    return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
-
+    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }!');
 
 });
 
