@@ -5,8 +5,8 @@ const bot = new TeleBot({
     usePlugins: ['askUser']
 });
 
-var a;
-var b;
+//var a;
+//var b;
 
 // On start command
 bot.on('/start', msg => {
@@ -23,7 +23,7 @@ bot.on('ask.email', msg => {
 
     const id = msg.from.id;
     const name = msg.text;
-    a = name;
+    //a = name;
 
     // Ask user age
     console.log("id ", id);
@@ -36,7 +36,7 @@ bot.on('ask.bitshare', msg => {
 
     const id = msg.from.id;
     const bitshareid = msg.text;
-    b = bitshareid;
+    //b = bitshareid;
     
         // Ask user age
     return bot.sendMessage(id, `Your bitshare id address, ${ bitshareid }! What is your Ethereum Wallet Address?`, {ask: 'erc20'});
