@@ -5,8 +5,8 @@ const bot = new TeleBot({
     usePlugins: ['askUser']
 });
 
-const a;
-const b;
+const a = 'test';
+const b = 'test';
 
 // On start command
 bot.on('/start', msg => {
