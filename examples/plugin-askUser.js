@@ -2,7 +2,8 @@ const TeleBot = require('../');
 
 const bot = new TeleBot({
     token: process.env.TELEGRAM_BOT_TOKEN,
-    usePlugins: ['askUser']
+    usePlugins: ['askUser'],
+    const id
 });
 
 // On start command
@@ -22,6 +23,7 @@ bot.on('ask.email', msg => {
     const name = msg.text;
 
     // Ask user age
+    console.log("id ", id);
     return bot.sendMessage(id, `Nice to meet you, ${ name }! What is your bitshare id?`, {ask: 'bitshare'});
 
 });
@@ -46,10 +48,18 @@ bot.on('ask.erc20', msg => {
     
         // Ask user age
 
-    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }!`);
+    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }! Please check all information and type confirm`, {ask: 'confirm'});
+});
+
+// Ask age event
+bot.on('ask.confirm', msg => {
+
+    const id = msg.from.id;
+    const address = msg.text;
     
+        // Ask user age
 
-
+    return bot.sendMessage(id, `your ethereum wallet address is, ${ address }!`, {ask: 'confirm'});
 });
 
 bot.start();
