@@ -11,12 +11,12 @@ bot.on('/start', msg => {
     const id = msg.from.id;
 
     // Ask user name
-    return bot.sendMessage(id, 'What is your name?', {ask: 'name'});
+    return bot.sendMessage(id, 'What is your email?', {ask: 'email'});
 
 });
 
 // Ask name event
-bot.on('ask.name', msg => {
+bot.on('ask.email', msg => {
 
     const id = msg.from.id;
     const name = msg.text;
