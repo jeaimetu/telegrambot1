@@ -2,9 +2,9 @@ const TeleBot = require('../');
 
 const bot = new TeleBot({
     token: process.env.TELEGRAM_BOT_TOKEN,
-    usePlugins: ['askUser'],
-    const id
+    usePlugins: ['askUser']
 });
+
 
 // On start command
 bot.on('/start', msg => {
